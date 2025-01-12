@@ -1,1 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cosmetology Spa Day</title>
+    <link rel="Stylesheet" media="(min-device-width: 12cm)" href="style.css">
+    <link rel="Stylesheet" media="(max-device-width: 12cm)" href="smoll.css">
 
+    <script>
+      function init() {
+        var loc = window.location.href;
+        var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+        var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                              loc + '?profile=css3';
+        document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+        document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+      }
+      window.onload = init;
+    </script>    
+  </head>
+
+  <body>
+    <!--  Snowflakes
+    <div id="snow-container"></div>
+    -->
+    
+    <div class="header">
+      <h1>ACC Salon</h1>
+      <h2 id="subTitle">Cosmetology & Barbering</h2>
+    </div>
+    <br><br>
+    
+    <!--Surveys-->
+    <h3> Make an Appointment!</h3>
+    <button> <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFph0xiEReFSb-bmuo__ZCzXdpQ2eerUd0j0ZnMxmnoXQH-Q/viewform?usp=sf_link"> Make an appointment for Spa Day</a></button>
+      <br><br>
+    <button><a href="https://docs.google.com/forms/d/e/1FAIpQLSeTt8UligAT3Racm4IjrZT16XG9p_XZ3yV2jtNt86tY8qyxdw/viewform?usp=sf_link"> Make a general appointment (not for Spa Day) </a></button>
+      <br><br>
+    
+    <!--
+    <nav>
+      <table id="navTable">
+        <tr>
+          <td><a href="#options">What We Do</a></td>
+          <td><a href="#price">Prices</a></td>
+        </tr>
+        <tr>
+          <td><a href="#teachers">Amazing Teachers</a></td>
+          <td><a href="#moreInfo">Locations & Contact</a></td>
+        </tr>
+      </table>
+    </nav>
+    -->
+    
+    <br>
+    <!--Timeline Pictures-->
+    <picture>
+      <source media="(min-width:12cm)" srcset="images/timelineHolder.png">
+      <source media="(max-width:12cm)" srcset="images/smallTimeline.png">
+      <img src="images/smallTimeline.png" alt="timeline" style="width:100%;height:auto;">
+    </picture>
+    
+    <article>
+    <br>
+    <!--What We Do Info-->
+    <h3 id="options"> What We Do</h3>
+    <div class="optContainer">
+    <table id="optionTable">
+      <tr>
+        <td>
+          <h4 style="color:white;">Hair Cuts & Styles</h4>
+          <p style="color:white;">We offer hair trims, general cuts, and beard trims! Additionaly, we can do any braids or style.</p>
+        </td>
+        <td>
+          <h4 style="color:white;">Facials</h4>
+          <p style="color:white;">We provide general face care including lotion (depending on skin type), masks, messages, and more based on your skin.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h4 style="color:white;">Manicures & Pedicures</h4>
+          <p style="color:white;">We offer both manicures and pedicures. We trim/file, exfoliate, lotion, and paint your nails! We also have acrylics.</p>
+        </td>
+      </tr>
+    </table>
+    </div>
+      
+    <br>
+    <!--prices-->
+    <h3 id="price"> Prices</h3>
+    <img src="images/venmo.png" id="venmo" alt="venmo">
+    <div class="priceContainer">
+    <div id="prices">
+    <h4 style="color:black;">Cash & Venmo</h4>
+    <p style="color:black;">Haircuts: $15 <br> Facials: $15 <br> Manicures: $15 <br><br> All chemicals and advance services require appointments</p>
+    </div> 
+    </div>
+      
+    <br>
+    <!--Teacher Info-->
+    <h3 id="teachers">Amazing Teachers</h3>
+    <div class="teach">
+      <div class="dContainer">
+        <img id="msD" src="images/msD.JPG">
+        <h4>Ms. D</h4>
+        <p>Teaches Master Barbering/Cosmetology 1, 2, & 3</p>
+      </div>
+      <div class="pContainer">
+        <img id="msP" src="images/msP.jpg">
+        <h4>Ms. Peake</h4>
+        <p>Teaches Cosmetology 1, 2, & 3</p>
+      </div>
+    </div>
+    <br>
+    <!--More Info-->
+    <h3 id="moreInfo"> Location & Contact</h3>
+    <div class="content">
+      <h4>Location</h4>
+      <p>Arlington Career Center Salon <br> 816 S. Walter Reed Drive <br> Arlington VA, 22204</p>
+    </div>
+    <div class="content">
+      <h4>Contact</h4>
+      <p>School Number: (703) 228-5799</p>
+    </div>
+      
+    </article>
+    <!--Seasonal Images
+    <img src="images/.png" id="snowman" alt="png">
+    -->
+    <!--  Snowman
+    <img src="images/snowman.png" id="snowman" alt="snowman"> 
+    -->
+    <img src="images/hearts.png" id="snowman" alt="hearts"> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <footer>
+      <a class=homeLinks id="vLink1"> <strong> HTML </strong> Valid! </a> | <a class=homeLinks id="vLink2"><strong> CSS </strong> Valid! </a>
+    </footer>
+    
+  <script>
+    const snowContainer = document.getElementById("snow-container");
+    const snowContent = ['&#10052', '&#10053', '&#10054']
+    const random = (num) => {
+      return Math.floor(Math.random() * num);
+    }
+    const getRandomStyles = () => {
+      const top = random(100);
+      const left = random(100);
+      const dur = random(10) + 10;
+      const size = random(25) + 25;
+      return ` 
+    top: -${top}%; 
+    left: ${left}%; 
+    font-size: ${size}px; 
+    animation-duration: ${dur}s; 
+    `;
+    }
+    const createSnow = (num) => {
+      for (var i = num; i > 0; i--) {
+        var snow = document.createElement("div");
+        snow.className = "snow";
+        snow.style.cssText = getRandomStyles();
+        snow.innerHTML = snowContent[random(2)]
+        snowContainer.append(snow);
+      }
+    }
+    window.addEventListener("load", () => {
+      createSnow(30)
+    });
+  </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPRX6W6PY2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SPRX6W6PY2');
+</script>
+  </body>
+</html>
